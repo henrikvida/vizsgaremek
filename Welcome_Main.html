@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Welcome_Style.css">
+    <title>Picsture - Welcome!</title>
+</head>
+
+<body>
+
+
+    <p class="szoveg1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Natus ipsum nulla rerum est dicta
+        eum, amet <br> quisquam non aliquid, laboriosam repellat temporibus? <br> Quisquam minima est architecto tenetur
+        animi at maxime.Lorem <br> ipsum, dolor sit amet consectetur adipisicing elit. <br> Natus ipsum nulla rerum est
+        dicta eum, amet <br> quisquam non aliquid, laboriosam repellat temporibus? <br> Quisquam minima est architecto
+        tenetur animi at maxime.</p>
+
+    <p class="szoveg2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Natus ipsum nulla rerum est dicta
+        eum, amet <br> quisquam non aliquid, laboriosam repellat temporibus? <br> Quisquam minima est architecto tenetur
+        animi at maxime.Lorem <br> ipsum, dolor sit amet consectetur adipisicing elit. <br> Natus ipsum nulla rerum est
+        dicta eum, amet <br> quisquam non aliquid, laboriosam repellat temporibus? <br> Quisquam minima est architecto
+        tenetur animi at maxime.</p>
+
+    <!--Lefele nyíl-->
+    <a href="#helykitolto" id="gotopos">
+        <div class="arrow" id="nyil"></div>
+    </a>
+
+    <script>
+
+        
+
+        window.onload = function(){
+            arrow = document.getElementById("nyil");
+            deg = 135;
+            const interval = setInterval(function(){
+                
+                if(window.scrollY > window.innerHeight - 200){
+                    if(deg >= -44){
+                        deg = deg - 10;
+                        arrow.style.transform = `rotate(${deg}deg)`;
+                        document.getElementById("gotopos").href = "#title";
+                    }
+                }else{
+                    if(deg <= 134){
+                        deg = deg + 10;
+                        arrow.style.transform = `rotate(${deg}deg)`;
+                        document.getElementById("gotopos").href = "#helykitolto";
+                    }
+                }
+            }, 10);
+        }
+
+    </script>
+
+    <!--Képek-->
+    <img src="dog.jpg" alt="dog" class="dog">
+    <img src="woman1.jpg" alt="woman" class="woman1">
+    <img src="food.jpg" alt="kaja" class="food">
+    <img src="tenger.jpg" alt="tenger" class="sea">
+    <img src="town.jpg" alt="varos" class="town" >
+    
+
+
+
+    <!-- //Background -->
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="navbarfelso">
+        <h1 data-item='Picsture' id="title">Picsture</h1>
+        <section>
+            <div class="felso_szoveg">Mutasd meg mire vagy képes.</div>
+            <nav>
+                <ul class="menuItems">
+                    <li><a href='#' data-item='Kezdőlap'>Kezdőlap</a></li>
+                    <li><a href='#' data-item='Bejelentkezés'>Bejelentkezés</a></li>
+                    <li><a href='#' data-item='Regisztráció'>Regisztráció</a></li>
+                    <li><a href='#' data-item='Rólunk'>Rólunk</a></li>
+                    <li><a href='#' data-item='Kapcsolat'>Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+
+<div class="helykitolto" id="helykitolto">
+    <p style="visibility: hidden;">geci</p>
+</div>
+
+
+
+</body>
+
+</html>
